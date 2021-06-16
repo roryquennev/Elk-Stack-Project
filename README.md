@@ -31,13 +31,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-|       Name      |          Function          | IP Address |     Operating System     |
-|-----------------|----------------------------|------------|--------------------------|
-| Jump Box        | Gateway - Docker - Ansible | 10.0.0.4   | Linux (Ubuntu 20.04 LTS) |
-| Webserver-1     | Web Server - Docker - DVWA | 10.0.0.5   | Linux (Ubuntu 20.04 LTS) |
-| Webserver-2     | Web Server - Docker - DVWA | 10.0.0.6   | Linux (Ubuntu 20.04 LTS) |
-| Webserver-3     | Web Server - Docker - DVWA | 10.0.0.10  | Linux (Ubuntu 20.04 LTS) |
-| Elk-Server      | Elk Stack                  | 10.1.0.4   | Linux (Ubuntu 20.04 LTS) |
+|         Name         |           Function         | IP Address |     Operating System     |
+|----------------------|----------------------------|------------|--------------------------|
+| Jump-Box-Provisioner | Gateway - Docker - Ansible | 10.0.0.4   | Linux (Ubuntu 20.04 LTS) |
+| Webserver-1          | Web Server - Docker - DVWA | 10.0.0.5   | Linux (Ubuntu 20.04 LTS) |
+| Webserver-2          | Web Server - Docker - DVWA | 10.0.0.6   | Linux (Ubuntu 20.04 LTS) |
+| Webserver-3          | Web Server - Docker - DVWA | 10.0.0.10  | Linux (Ubuntu 20.04 LTS) |
+| Elk-Server           | Elk Stack                  | 10.1.0.4   | Linux (Ubuntu 20.04 LTS) |
 
 ### Access Policies
 
@@ -51,11 +51,13 @@ Machines within the network can only be accessed by _____.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+|         Name         |  Publicly Accessible  |                      Allowed IP Addresses                       |
+|----------------------|-----------------------|-----------------------------------------------------------------|
+| Jump-Box-Provisioner | No                    | My Personal IP Address                                          |
+| Webserver-1          | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
+| Webserver-2          | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
+| Webserver-3          | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
+| Elk-Server           | No                    | My Persnal IP Address, 10.0.0.4 (Jump-Box-Provisioner)          |
 
 ### Elk Configuration
 
