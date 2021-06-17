@@ -35,9 +35,9 @@ The configuration details of each machine may be found below.
 |          Name         |           Function         | IP Address |     Operating System     |
 |-----------------------|----------------------------|------------|--------------------------|
 | Jump-Box-Provisioner  | Gateway - Docker - Ansible | 10.0.0.4   | Linux (Ubuntu 20.04 LTS) |
-| Web-Server-1          | Web Server - Docker - DVWA | 10.0.0.5   | Linux (Ubuntu 20.04 LTS) |
-| Web-Server-2          | Web Server - Docker - DVWA | 10.0.0.6   | Linux (Ubuntu 20.04 LTS) |
-| Web-Server-3          | Web Server - Docker - DVWA | 10.0.0.10  | Linux (Ubuntu 20.04 LTS) |
+| Web-Server1           | Web Server - Docker - DVWA | 10.0.0.5   | Linux (Ubuntu 20.04 LTS) |
+| Web-Server2           | Web Server - Docker - DVWA | 10.0.0.6   | Linux (Ubuntu 20.04 LTS) |
+| Web-Server3           | Web Server - Docker - DVWA | 10.0.0.10  | Linux (Ubuntu 20.04 LTS) |
 | Elk-Server            | Elk Stack                  | 10.1.0.4   | Linux (Ubuntu 20.04 LTS) |
 
 ### Access Policies
@@ -56,9 +56,9 @@ A summary of the access policies in place can be found in the table below.
 |          Name         |  Publicly Accessible  |                      Allowed IP Addresses                       |
 |-----------------------|-----------------------|-----------------------------------------------------------------|
 | Jump-Box-Provisioner  | No                    | My Personal IP Address                                          |
-| Web-Server-1          | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
-| Web-Server-2          | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
-| Web-Server-3          | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
+| Web-Server1           | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
+| Web-Server2           | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
+| Web-Server3           | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
 | Elk-Server            | No                    | My Persnal IP Address, 10.0.0.4 (Jump-Box-Provisioner)          |
 
 ### Elk Configuration
@@ -80,9 +80,9 @@ This ELK server is configured to monitor the following machines:
 
 |         Name          | IP Address |   
 |-----------------------|------------|
-| Web-Server-1          | 10.0.0.5   |
-| Web-Server-2          | 10.0.0.6   | 
-| Web-Server-3          | 10.0.0.10  | 
+| Web-Server1           | 10.0.0.5   |
+| Web-Server2           | 10.0.0.6   | 
+| Web-Server3           | 10.0.0.10  | 
 
 
 We have installed the following Beats on these machines:
