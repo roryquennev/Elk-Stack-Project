@@ -23,7 +23,9 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will have high availability, in addition to restricting access to the network. In addition, the load utilizing the load balancer ensures that server response times are minimized and achive maximum throughput. Efficiency and availability are two objectives that can be met here.
 
-On the other hand, using our Jump-Box-Provisioner as the only virtual machine that can directly access other machines on the network 
+On the other hand, using our Jump-Box-Provisioner as the only virtual machine that can directly access other machines on the network ensures
+access to the network is restricted/minimized (as much as possible)
+
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
@@ -59,7 +61,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-Server1           | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
 | Web-Server2           | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
 | Web-Server3           | Yes via load balancer | 52.151.240.129 (Load Balancer), 10.0.0.4 (Jump-Box-Provisioner) |
-| Elk-Server            | No                    | My Persnal IP Address, 10.0.0.4 (Jump-Box-Provisioner)          |
+| Elk-Server            | No                    | My Personal IP Address, 10.0.0.4 (Jump-Box-Provisioner)         |
 
 ### Elk Configuration
 
