@@ -63,8 +63,8 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because 
+ansible allows for continuous integration and continuous deployment regarding any current and future machines.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
@@ -97,7 +97,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook file to /etc/ansible 
 - Update the host file to include the virtual machines by their internal IP and their respective server grouping
-- ![hosts](Images/hosts.PNG)
+![hosts](Images/hosts.PNG)
 - Run the playbook, and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana (Kibana) to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
