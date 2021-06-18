@@ -21,13 +21,12 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_ 
 Load balancing ensures that the application will have high availability, in addition to restricting access to the network. With our load balancer, response times are minimized and maximum throughput is achieved. Efficiency and availability are two objectives that can be met here, mitigating the risks associated with denial of service attacks and being able to compensate should a server become compromised. Naturally, these risks are reduced but not completely. 
 
 On the other hand, using our Jump-Box-Provisioner as the only virtual machine that can directly access other machines on the network ensures
-access to the network is kept minimized. No other machines, beyond the webservers hosting the DVWA, can be foreseeably accessed by another outside machine.
+access to the network is kept minimized. No other machines, beyond the webservers hosting the DVWA, can foreseeably be accessed by another outside machine.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic. Filebeat will collect the logs and forward them to Elasticsearch and, similarly, Metricbeat will record the metrics and statistics and forward them to the same destination.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic. Filebeat will collect the logs and forward them to the server and, similarly, Metricbeat will record the metrics and statistics and forward them to the same destination. Examples we can expect to see are system logs that pertain to the syslogs of the webservers and metrics monitoring the overall health of the containers (CPU usage, Memory usage, current status etc).
 
 The configuration details of each machine may be found below.
 
@@ -86,9 +85,6 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 - Filebeat and Metricbeat
-
-These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
