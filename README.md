@@ -21,16 +21,13 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will have high availability, in addition to restricting access to the network. In addition, the load utilizing the load balancer ensures that server response times are minimized and achive maximum throughput. Efficiency and availability are two objectives that can be met here.
+- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_ *************************************************
+Load balancing ensures that the application will have high availability, in addition to restricting access to the network. With our load balancer, response times are minimized and maximum throughput is achieved. Efficiency and availability are two objectives that can be met here, mitigating the risks associated with denial of service attacks and being able to compensate should a server become compromised. Naturally, these risks are not reduced completely. 
 
 On the other hand, using our Jump-Box-Provisioner as the only virtual machine that can directly access other machines on the network ensures
-access to the network is restricted/minimized (as much as possible)
+access to the network is kept minimized and no machine, beyond the webservers hosting the DVWA, can be foreseeably accessed by an outside machine.
 
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
-
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic. Filebeat will collect the logs and forward them to Elasticsearch and, similarly, Metricbeat will record the metrics and statistics and forward them to the same destination.
 
 The configuration details of each machine may be found below.
 
@@ -50,7 +47,7 @@ Only the Jump-Box-Provisioner machine can accept connections from the Internet. 
 - My Personal IP Address
 
 Machines within the network can only be accessed by SSH.
-- The only machine that can directly access the ELK-Server VM is the Jump-Box-Provisioner VM with its internal IP address of 10.0.0.4. My workstation, using my personal IP address, has been enabled to access Kibana using HTTP. 
+- The only machine that can directly access the ELK-Server VM is the Jump-Box-Provisioner VM with its internal IP address of 10.0.0.4. My workstation with my personal IP address, has been enabled to access Kibana using HTTP. 
 
 
 A summary of the access policies in place can be found in the table below.
