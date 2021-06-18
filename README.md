@@ -39,7 +39,7 @@ The configuration details of each machine may be found below.
 | Web-Server1           | Web Server - DVWA | 10.0.0.5   | Linux (Ubuntu 20.04 LTS) |
 | Web-Server2           | Web Server - DVWA | 10.0.0.6   | Linux (Ubuntu 20.04 LTS) |
 | Web-Server3           | Web Server - DVWA | 10.0.0.10  | Linux (Ubuntu 20.04 LTS) |
-| Elk-Server            | Elk Stack         | 10.1.0.4   | Linux (Ubuntu 20.04 LTS) |
+| Elk-Server            | ELK Stack         | 10.1.0.4   | Linux (Ubuntu 20.04 LTS) |
 
 ### Access Policies
 
