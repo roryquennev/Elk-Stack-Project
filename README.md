@@ -96,9 +96,10 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook (.yml) file to /etc/ansible 
 - Update the hosts file to include the virtual machines by their internal IP and their respective server grouping:
+
 ![hosts](Images/hosts.PNG)
 
-*This will aid in specifying which machine to install the ELK server on versus installing Filebeat and Metricbeat
+*This will aid in specifying which machine to install the ELK server on versus the machines that will require Filebeat and Metricbeat
 - Run the playbook, and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana (Kibana) to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
