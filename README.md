@@ -8,7 +8,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 * [pentest.yml](./Ansible/pentest.yml) - To install the DVWA
 * [ELK-Playbook.yml](./Ansible/ELK-Playbook.yml) - To install ELK
+* [Filebeat-Config.yml](.Ansible/Filbeat-Config.yml) - To configure Filbeat
 * [Filebeat-playbook.yml](./Ansible/Filebeat-Playbook.yml) - To install Filebeat
+* [Metricbeat-Config.yml](./Ansible/Metricbeat-Config.yml) - To configure Metricbeat
 * [Metricbeat-playbook.yml](./Ansible/Metricbeat-Playbook.yml) - To install Metricbeat
 
 This document contains the following details:
