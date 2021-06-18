@@ -21,23 +21,23 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_ *************************************************
-Load balancing ensures that the application will have high availability, in addition to restricting access to the network. With our load balancer, response times are minimized and maximum throughput is achieved. Efficiency and availability are two objectives that can be met here, mitigating the risks associated with denial of service attacks and being able to compensate should a server become compromised. Naturally, these risks are not reduced completely. 
+- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_ 
+Load balancing ensures that the application will have high availability, in addition to restricting access to the network. With our load balancer, response times are minimized and maximum throughput is achieved. Efficiency and availability are two objectives that can be met here, mitigating the risks associated with denial of service attacks and being able to compensate should a server become compromised. Naturally, these risks are reduced but not completely. 
 
 On the other hand, using our Jump-Box-Provisioner as the only virtual machine that can directly access other machines on the network ensures
-access to the network is kept minimized and no machine, beyond the webservers hosting the DVWA, can be foreseeably accessed by an outside machine.
+access to the network is kept minimized. No other machines, beyond the webservers hosting the DVWA, can be foreseeably accessed by another outside machine.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic. Filebeat will collect the logs and forward them to Elasticsearch and, similarly, Metricbeat will record the metrics and statistics and forward them to the same destination.
 
 The configuration details of each machine may be found below.
 
-|          Name         |           Function         | IP Address |     Operating System     |
-|-----------------------|----------------------------|------------|--------------------------|
-| Jump-Box-Provisioner  | Gateway - Docker - Ansible | 10.0.0.4   | Linux (Ubuntu 20.04 LTS) |
-| Web-Server1           | Web Server - Docker - DVWA | 10.0.0.5   | Linux (Ubuntu 20.04 LTS) |
-| Web-Server2           | Web Server - Docker - DVWA | 10.0.0.6   | Linux (Ubuntu 20.04 LTS) |
-| Web-Server3           | Web Server - Docker - DVWA | 10.0.0.10  | Linux (Ubuntu 20.04 LTS) |
-| Elk-Server            | Elk Stack                  | 10.1.0.4   | Linux (Ubuntu 20.04 LTS) |
+|          Name         |      Function     | IP Address |     Operating System     |
+|-----------------------|-------------------|------------|--------------------------|
+| Jump-Box-Provisioner  | Gateway - Ansible | 10.0.0.4   | Linux (Ubuntu 20.04 LTS) |
+| Web-Server1           | Web Server - DVWA | 10.0.0.5   | Linux (Ubuntu 20.04 LTS) |
+| Web-Server2           | Web Server - DVWA | 10.0.0.6   | Linux (Ubuntu 20.04 LTS) |
+| Web-Server3           | Web Server - DVWA | 10.0.0.10  | Linux (Ubuntu 20.04 LTS) |
+| Elk-Server            | Elk Stack         | 10.1.0.4   | Linux (Ubuntu 20.04 LTS) |
 
 ### Access Policies
 
@@ -95,7 +95,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the playbook file to /etc/ansible 
-- Update the host file to include the virtual machines by their internal IP and their respective server grouping
+- Update the hosts file to include the virtual machines by their internal IP and their respective server grouping
 ![hosts](Images/hosts.PNG)
 - Run the playbook, and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana (Kibana) to check that the installation worked as expected.
 
