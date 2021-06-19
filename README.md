@@ -35,8 +35,7 @@ access to the network is kept minimized. No other machines, beyond the webserver
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic. Filebeat will collect the logs and forward them to the server and, similarly, Metricbeat will record the metrics and statistics and forward them to the same destination. Examples we can expect to see are system logs that pertain to the syslogs of the webservers and metrics monitoring the overall health of the containers (CPU usage, Memory usage, current status etc).
 
-The configuration details of each machine may be found below.
-
+The configuration details of each machine may be found below:
 |          Name         |      Function     | IP Address |     Operating System     |
 |-----------------------|-------------------|------------|--------------------------|
 | Jump-Box-Provisioner  | Gateway - Ansible | 10.0.0.4   | Linux (Ubuntu 20.04 LTS) |
@@ -56,7 +55,7 @@ Machines within the network can only be accessed by SSH.
 - The only machine that can directly access the ELK-Server VM is the Jump-Box-Provisioner VM with its internal IP address of 10.0.0.4. My workstation with my personal IP address, has been enabled to access Kibana using HTTP. 
 
 
-A summary of the access policies in place can be found in the table below.
+A summary of the access policies in place can be found in the table below:
 
 |          Name         |  Publicly Accessible  |                      Allowed IP Addresses                       |
 |-----------------------|-----------------------|-----------------------------------------------------------------|
