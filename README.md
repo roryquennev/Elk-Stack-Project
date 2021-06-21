@@ -13,7 +13,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 * [Filebeat-Config.yml](./Ansible/Filebeat-Config.yml) - To configure Filebeat
 * [Filebeat-playbook.yml](./Ansible/Filebeat-Playbook.yml) - To install Filebeat
 * [Metricbeat-Config.yml](./Ansible/Metricbeat-Config.yml) - To configure Metricbeat
-* [Metricbeat-playbook.yml](./Playbooks_&_Configuration_Files/Metricbeat-Playbook.yml) - To install Metricbeat
+* [Metricbeat-playbook.yml](./Playbooks & Configuration Files/Metricbeat-Playbook.yml) - To install Metricbeat
 
 This document contains the following details:
 - Description of the Topology
