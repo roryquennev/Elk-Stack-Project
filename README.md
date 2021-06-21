@@ -105,9 +105,10 @@ SSH into the control node and follow the steps below:
 - Update the hosts file (same directory) to include the virtual machines by their internal IP and their respective server grouping
   - This can be done by running the following command: nano /etc/ansible/hosts
 
-  ![hosts](Images/hosts.PNG)
+    ![hosts](Images/hosts.PNG)
 
   *This will aid in specifying which machine to install the ELK server on versus the machines that will require Filebeat and Metricbeat
+  *The addition of 'ansible_python_interpreter=/user/bin//python3' allows Ansible to detect the use of Python 3
 - Run the playbook, and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana (Kibana) to check that the installation worked as expected.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
