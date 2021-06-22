@@ -115,9 +115,16 @@ SSH into the Ansible control node and follow the steps below:
   ansible-playbook /etc/ansible/<filename.yml>
 - Following successful installation of playbooks, navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that Kibana is accessible  
 - Navigate to the Kibana Home page, as we still need to import our data from our webservers
+  - Import the log data:
+    - Click 'Add log data' and 'System logs'
+    - Click 'Check data' and then 'System logs dashboard'
+  - Import the metric data"
+    - Click 'Add metric data' and 'Docker Metrics'
+    - Click 'Check data' and then 'Docker metrics dashboard'
+    
   - Import the log data by clicking 'Add log data' and 'System logs'
     - scroll down and click 'Check data' and afterwards click 'System logs dashboard'
   - Import the metric data by clicking 'Add metric data' and 'Docker Metrics'
     - scroll down and click 'Check data' and then 'Docker metrics dashboard'
 
-Voila!
+
