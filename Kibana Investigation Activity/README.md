@@ -26,7 +26,9 @@ We can easily do this by trying to SSH to a web machine from our jump box direct
         - while :; do ssh -T ansible@10.0.0.5; done
 
 3. Search through the logs in Kibana to locate your generated failed login attempts.
+![Log Stream Live - SSH Fail](https://user-images.githubusercontent.com/77551247/123014105-829e5580-d393-11eb-808d-78121c9ec405.PNG)
 
+        
 **Bonus**: Create a nested loop that generates SSH login attempts across all three of your VM's:
         
         - while :; do ssh -T ansible@10.0.0.5 | ssh -T ansible@10.0.0.6 | ssh -T ansible@10.0.0.10; done
