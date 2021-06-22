@@ -1,4 +1,4 @@
-## Activity File: Kibana Continued
+## Activity File: Kibana Investigation
 
 #### SSH Barrage
 
