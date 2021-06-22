@@ -1,4 +1,4 @@
-## Activity File: Kibana Investigation
+## Kibana Investigation
 
 #### SSH Barrage
 
@@ -13,26 +13,31 @@ Task: Generate a high amount of failed SSH login attempts and verify that Kibana
 
 - Before you hand over the server to the IR team, your senior architect has asked you to verify the ELK server is working as expected and pulling both logs and metrics from the pentesting web servers.
 
+**Your Task**: Generate a high amount of failed SSH login attempts and verify that Kibana is picking up this activity.
+
+---
+
+#### Instructions
+
+One way we can generate logs of interest is to create some failed SSH logins on our servers.
+
+- The only environment that holds our SSH keys is our Ansible container. Attempting to create an SSH connection from any other environment will trigger a log entry.
+- We can also create a log entry by attempting to log in with the wrong username.
+- Note: A successful SSH login also creates a log entry, but here we will focus on failed logins.
+
+We can easily do this by trying to SSH to a web machine from our jump box directly without using the Ansible container. 
+
 1. Start by logging into your jump-box. 
 
-        - Run: `ssh username@ip.of.web.vm`
-
-        - You should receive an error:
-
-                ```bash
-                sysadmin@Jump-Box-Provisioner:~$ ssh sysadmin@10.0.0.5
-                sysadmin@10.0.0.5: Permission denied (publickey).
-                ```
-
-        - This error was also logged and sent to Kibana. 
-
 2.  Run the failed SSH command in a loop to generate failed login log entries.
-
-         - You can use a bash `for` or `while` loop, directly on the command line, to repeatedly run the SSH command.
+    - while :; do ssh -T ansible@10.0.0.5; done
 
 3. Search through the logs in Kibana to locate your generated failed login attempts.
 
-**Bonus**: Create a nested loop that generates SSH login attempts across all three of your VM's.
+**Bonus**: Create a nested loop that generates SSH login attempts across all three of your VM's:
+    - while :; do ssh -T ansible@10.0.0.5 | ssh -T ansible@10.0.0.6 | ssh -T ansible@10.0.0.10; done
+
+
 
 </details>
 
@@ -43,6 +48,30 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
 <details>
 
 <summary> Activity File: Linux Stress </summary>
+
+
+#### Scenario
+
+- You are a cloud architect that has been tasked with setting up an ELK server to gather logs for the Incident Response team to use for training.
+
+- Before you hand over the server to the IR team, your senior architect has asked that you verify the ELK server is working as expected and pulling both logs and metrics from the pen-testing web servers.
+
+
+**Your Task**: Generate a high amount of CPU usage on the pentesting machines and verify that Kibana picks up this data.
+
+---
+
+#### Notes
+
+The Metrics page for a single VM shows the CPU usage for that machine. This shows how much work the machine is doing. Excessively high CPU usage is typically a cause for concern, as overworked computers are at greater risk for failure.
+
+- Metricbeat forwards data about CPU load to Elasticsearch, which can be visualized with Kibana.
+
+- In this activity, you will intentionally stress the CPU of one of your VMs, then find evidence of the increased activity in Kibana.
+
+Linux has a common, easy-to-use diagnostic program called `stress`. It is easy to use and can be downloaded via `apt`.
+
+#### Instructions
 
 1. From your jump box, start up your Ansible container and attach to it.
 
@@ -68,6 +97,17 @@ Task: Generate a high amount of web requests to your pen-testing servers and mak
 <details>
 
 <summary> Activity File: wget-DoS </summary>
+
+
+#### Scenario
+
+- You are a cloud architect that has been tasked with setting up an ELK server to gather logs for the Incident Response team to use for training.
+
+- Before you hand over the server to the IR team, your senior architect has asked that you verify the ELK server is working as expected and pulling both logs and metrics from the pen-testing web servers.
+
+**Your Task**: Generate a high amount of web requests to your pen-testing servers and make sure that Kibana is picking them up.
+
+---
 
 #### Instructions
 
