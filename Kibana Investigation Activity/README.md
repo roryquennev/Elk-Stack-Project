@@ -1,88 +1,5 @@
 ## Activity File: Kibana Continued
 
-- This week, you created the infrastructure behind a security information and event management system such as Kibana. Once that set up is complete, you will have finished the project. 
-
-- This optional activity tasks you with exploring more Kibana capabilities, some of which you will use in future projects.  
-
-- **Note**: In order to complete these activities, you will need to complete the optional Metricbeat configuration.
-
-
-### Scenario 
-
-In this activity, you will suppose the role of a cloud architect that has been tasked with setting up an ELK server to gather logs for the Incident Response team.
-
-Before you hand over the server to the IR team, your senior architect has asked that you verify the ELK server is working as expected and pulling both logs and metrics from the pen-testing web servers.
-
-You will have three tasks: 
-
-1. Generate a high amount of failed SSH login attempts and verify that Kibana is picking up this activity.
-
-2. Generate a high amount of CPU usage on the pen-testing machines and verify that Kibana picks up this data.
-
-3. Generate a high amount of web requests to your pen-testing servers and make sure that Kibana is picking them up.
-
-
-These activities will guide you though generating some data to visualize in Kibana. Each of these activity will require the following high level steps: 
-
-1. Use your jump-box to attack your web machines in various ways.
-2. Use a Linux utility to stress the system of a webVM directly. 
-3. Subsequently generate traffic and logs that Kibana will collect.
-4. View that traffic in various ways inside Kibanna.
-
-
-It's also worth noting that these activities comprise different job roles:
-
-- Getting the infrastructure setup and maintaining it is the role of a security engineer or cloud architect. 
-
-- Using that infrastructure by creating dashboards and alerts fall under the security analyst role. It would be rare to have a position where you would be required to do both.
-
-That said, now that we have Kibana setup and gathering data from three web servers, its worth learning how to visualize data in Kibana.
-
-Before getting started, we'll have to complete some metrics and logs set up. 
-
-### Setup: Kibana Metrics and Logs Orientation
-
-Before we begin generating traffic, locate the two screens inside Kibana that you will use to visualize this traffic:
-
-- Logs
-- Metrics
-
-    ![](Images/Metrics-Logs.png)
-
-These pages will show you the changes in data that we will create.
-
-#### Logs
-
-- Click **Logs** to see some general system logs coming from the web machines.
-
-    ![](Images/Logs-General.png)
-
-- Notice that you can stream logs live from the machines. 
-
-    ![](Images/Stream-Live.png)
-
-#### Metrics
-
-- Next, click **Metrics** on the left side. 
-
-    - Here we can see each of our VMs that are sending metrics.
-
-- Click on one of the large squares that represent one of your VMs.
-
-- Choose **View metrics** from the dropdown that appears.
-
-    ![](Images/Metric-VM-Dropdown.png)
-
-- Notice that you can see CPU and memory usage here.
-
-    ![](Images/Host-Overview.png)
-
-Now that we know where to look for this data, let's generate some unusual network traffic.
-
-### Activity Tasks
-
-Expand the provided activity files to complete each task. These tasks can be completed in any order. 
-
 #### SSH Barrage
 
 Task: Generate a high amount of failed SSH login attempts and verify that Kibana is picking up this activity.
@@ -95,22 +12,6 @@ Task: Generate a high amount of failed SSH login attempts and verify that Kibana
 - You are a cloud architect that has been tasked with setting up an ELK server to gather logs for the Incident Response team to use for training.
 
 - Before you hand over the server to the IR team, your senior architect has asked you to verify the ELK server is working as expected and pulling both logs and metrics from the pentesting web servers.
-
-**Your Task**: Generate a high amount of failed SSH login attempts and verify that Kibana is picking up this activity.
-
----
-
-#### Instructions
-
-One way we can generate logs of interest is to create some failed SSH logins on our servers.
-
-- The only environment that holds our SSH keys is our Ansible container. Attempting to create an SSH connection from any other environment will trigger a log entry.
-
-- We can also create a log entry by attempting to log in with the wrong username.
-
-- Note: A successful SSH login also creates a log entry, but here we will focus on failed logins.
-
-We can easily do this by trying to SSH to a web machine from our jump box directly without using the Ansible container. 
 
 1. Start by logging into your jump-box. 
 
@@ -133,8 +34,6 @@ We can easily do this by trying to SSH to a web machine from our jump box direct
 
 **Bonus**: Create a nested loop that generates SSH login attempts across all three of your VM's.
 
-
-
 </details>
 
 #### Linux Stress
@@ -144,30 +43,6 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
 <details>
 
 <summary> Activity File: Linux Stress </summary>
-
-
-#### Scenario
-
-- You are a cloud architect that has been tasked with setting up an ELK server to gather logs for the Incident Response team to use for training.
-
-- Before you hand over the server to the IR team, your senior architect has asked that you verify the ELK server is working as expected and pulling both logs and metrics from the pen-testing web servers.
-
-
-**Your Task**: Generate a high amount of CPU usage on the pentesting machines and verify that Kibana picks up this data.
-
----
-
-#### Notes
-
-The Metrics page for a single VM shows the CPU usage for that machine. This shows how much work the machine is doing. Excessively high CPU usage is typically a cause for concern, as overworked computers are at greater risk for failure.
-
-- Metricbeat forwards data about CPU load to Elasticsearch, which can be visualized with Kibana.
-
-- In this activity, you will intentionally stress the CPU of one of your VMs, then find evidence of the increased activity in Kibana.
-
-Linux has a common, easy-to-use diagnostic program called `stress`. It is easy to use and can be downloaded via `apt`.
-
-#### Instructions
 
 1. From your jump box, start up your Ansible container and attach to it.
 
@@ -194,17 +69,6 @@ Task: Generate a high amount of web requests to your pen-testing servers and mak
 
 <summary> Activity File: wget-DoS </summary>
 
-
-#### Scenario
-
-- You are a cloud architect that has been tasked with setting up an ELK server to gather logs for the Incident Response team to use for training.
-
-- Before you hand over the server to the IR team, your senior architect has asked that you verify the ELK server is working as expected and pulling both logs and metrics from the pen-testing web servers.
-
-**Your Task**: Generate a high amount of web requests to your pen-testing servers and make sure that Kibana is picking them up.
-
----
-
 #### Instructions
 
 The Metrics section for a single VM will show Load and Network Traffic data. 
@@ -227,11 +91,11 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
         Reusing existing connection to 10.0.0.5:80.
         HTTP request sent, awaiting response... 200 OK
         Length: 1523 (1.5K) [text/html]
-        Saving to: ‘index.html’
+        Saving to: Â‘index.htmlÂ’
 
         index.html            100%[=======================>]   1.49K  --.-KB/s    in 0s      
 
-        2020-05-08 15:44:00 (179 MB/s) - ‘index.html’ saved [1523/1523]
+        2020-05-08 15:44:00 (179 MB/s) - Â‘index.htmlÂ’ saved [1523/1523]
         ```
 
 3. Run `ls` to view the file you downloaded from your web VM to your jump box. 
@@ -266,5 +130,5 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 
 ---
 
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
+Â© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
 
