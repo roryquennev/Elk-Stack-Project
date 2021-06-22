@@ -124,5 +124,5 @@ SSH into the Ansible control node and follow the steps below:
     
 
 
-Congratuations! You have now successfully deployed the ELK Stack.   
+Congratuations! You have successfully deployed this ELK Stack!  
 
