@@ -17,10 +17,6 @@ Task: Generate a high amount of failed SSH login attempts and verify that Kibana
 
 ---
 
-- The only environment that holds our SSH keys is our Ansible container. Attempting to create an SSH connection from any other environment will trigger a log entry.
-- We can also create a log entry by attempting to log in with the wrong username.
-- Note: A successful SSH login also creates a log entry, but here we will focus on failed logins.
-
 We can easily do this by trying to SSH to a web machine from our jump box directly without using the Ansible container. 
 
 1. Start by logging into your jump-box. 
