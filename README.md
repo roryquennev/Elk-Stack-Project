@@ -100,7 +100,7 @@ We have installed the following Beats on these machines:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:
+SSH into the Ansible control node and follow the steps below:
 - Copy the playbook (.yml) file to /etc/ansible 
 - Update the hosts file (same directory) to include the virtual machines by their internal IP and their respective server grouping
   - This can be done by running the following command:
@@ -112,7 +112,12 @@ SSH into the control node and follow the steps below:
   
 - Run the playbooks and update the corresponding configuration file (where relevant), in the order listed above. 
   - The playbooks can be run with the following command:
-  ansible-playbook /etc/ansible/[playbookfile]
-- Following successful installation of playbooks, navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that the installation worked as expected.
+  ansible-playbook /etc/ansible/<filename.yml>
+- Following successful installation of playbooks, navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that Kibana is accessible  
+- Navigate to the Kibana Home page and do the following:
+  - Import the log data by clicking 'Add log data' and 'System logs'
+    - scroll down and click 'Check data' and afterwards click 'System logs dashboard'
+  - Import the metric data by clicking 'Add metric data' and 'Docker Metrics'
+    - scroll down and click 'Check data' and then 'Docker metrics dashboard'
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
