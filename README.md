@@ -122,5 +122,5 @@ SSH into the Ansible control node and follow the steps below:
     - Click 'Add metric data' and 'Docker Metrics'
     - Click 'Check data' and then 'Docker metrics dashboard'
     
-Congratuations, you have now successfully deployed the ELK Stack!
+                          Congratuations, you have now successfully deployed the ELK Stack!
 
