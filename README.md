@@ -120,4 +120,4 @@ SSH into the Ansible control node and follow the steps below:
   - Import the metric data by clicking 'Add metric data' and 'Docker Metrics'
     - scroll down and click 'Check data' and then 'Docker metrics dashboard'
 
-
+Voila!
