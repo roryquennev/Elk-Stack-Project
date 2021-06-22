@@ -17,10 +17,6 @@ Task: Generate a high amount of failed SSH login attempts and verify that Kibana
 
 ---
 
-#### Instructions
-
-One way we can generate logs of interest is to create some failed SSH logins on our servers.
-
 - The only environment that holds our SSH keys is our Ansible container. Attempting to create an SSH connection from any other environment will trigger a log entry.
 - We can also create a log entry by attempting to log in with the wrong username.
 - Note: A successful SSH login also creates a log entry, but here we will focus on failed logins.
@@ -35,6 +31,7 @@ We can easily do this by trying to SSH to a web machine from our jump box direct
 3. Search through the logs in Kibana to locate your generated failed login attempts.
 
 **Bonus**: Create a nested loop that generates SSH login attempts across all three of your VM's:
+        
         - while :; do ssh -T ansible@10.0.0.5 | ssh -T ansible@10.0.0.6 | ssh -T ansible@10.0.0.10; done
 
 
