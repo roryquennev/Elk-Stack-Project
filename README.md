@@ -107,8 +107,8 @@ SSH into the control node and follow the steps below:
 
     ![hosts](Images/hosts.PNG)
 
-    * This will aid in specifying which machine to install the ELK server on versus the machines that will require Filebeat, Metricbeat and the DVWA 
-    * Adding 'ansible_python_interpreter=/user/bin/python3' this will allow Ansible to detect the use of Python 3
+    *This will aid in specifying which machine to install the ELK server on versus the machines that will require Filebeat, Metricbeat and the DVWA 
+    *Adding 'ansible_python_interpreter=/user/bin/python3' will allow Ansible to detect the use of Python 3
   
 - Run the playbook, and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana (Kibana) to check that the installation worked as expected.
 
