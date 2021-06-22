@@ -103,12 +103,16 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook (.yml) file to /etc/ansible 
 - Update the hosts file (same directory) to include the virtual machines by their internal IP and their respective server grouping
-  - This can be done by running the following command: nano /etc/ansible/hosts
+  - This can be done by running the following command:
+    nano /etc/ansible/hosts
 
     ![hosts](Images/hosts.PNG)
 
     *This will aid in specifying which machine to install the ELK server on versus the machines that will require Filebeat, Metricbeat and the DVWA. Meanwhile, Adding 'ansible_python_interpreter=/user/bin/python3' will allow Ansible to detect the use of Python 3!
   
-- Run the playbook, and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana (Kibana) to check that the installation worked as expected.
+- Run the playbooks and update the corresponding configuration file (where relevant), in the order listed above. 
+  - The playbooks can be run with the following command:
+  ansible-playbook /etc/ansible/[playbookfile]
+- Following successful installation of playbooks, navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that the installation worked as expected.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
