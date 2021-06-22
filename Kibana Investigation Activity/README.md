@@ -30,11 +30,10 @@ We can easily do this by trying to SSH to a web machine from our jump box direct
 **Bonus**: Create a nested loop that generates SSH login attempts across all three of your VM's:
         
         - while :; do ssh -T ansible@10.0.0.5 | ssh -T ansible@10.0.0.6 | ssh -T ansible@10.0.0.10; done
+          ![SSHfailloginloop](https://user-images.githubusercontent.com/77551247/123013886-0dcb1b80-d393-11eb-84e2-e2fe3df17065.png)
+
           
-![SSHfailloginloop](./Kibana_Investigation_Activity/Images/SSHfailloginloop.PNG)
 
-
-![SSHfailloginloop](https://user-images.githubusercontent.com/77551247/123013715-baf16400-d392-11eb-9e66-ed24ec73595b.PNG)
 
 </details>
 
