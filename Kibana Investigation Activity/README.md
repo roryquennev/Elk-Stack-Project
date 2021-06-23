@@ -7,14 +7,6 @@ Task: Generate a high amount of failed SSH login attempts and verify that Kibana
 <details>
 <summary> Activity File: SSH Barrage </summary>
 
-#### Scenario
-
-- You are a cloud architect that has been tasked with setting up an ELK server to gather logs for the Incident Response team to use for training.
-
-- Before you hand over the server to the IR team, your senior architect has asked you to verify the ELK server is working as expected and pulling both logs and metrics from the pentesting web servers.
-
-**Your Task**: Generate a high amount of failed SSH login attempts and verify that Kibana is picking up this activity.
-
 ---
 
 We can easily do this by trying to SSH to a web machine from our jump box directly without using the Ansible container. 
@@ -54,29 +46,9 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
 
 <summary> Activity File: Linux Stress </summary>
 
-
-#### Scenario
-
-- You are a cloud architect that has been tasked with setting up an ELK server to gather logs for the Incident Response team to use for training.
-
-- Before you hand over the server to the IR team, your senior architect has asked that you verify the ELK server is working as expected and pulling both logs and metrics from the pen-testing web servers.
-
-
-**Your Task**: Generate a high amount of CPU usage on the pentesting machines and verify that Kibana picks up this data.
-
 ---
 
 #### Notes
-
-The Metrics page for a single VM shows the CPU usage for that machine. This shows how much work the machine is doing. Excessively high CPU usage is typically a cause for concern, as overworked computers are at greater risk for failure.
-
-- Metricbeat forwards data about CPU load to Elasticsearch, which can be visualized with Kibana.
-
-- In this activity, you will intentionally stress the CPU of one of your VMs, then find evidence of the increased activity in Kibana.
-
-Linux has a common, easy-to-use diagnostic program called `stress`. It is easy to use and can be downloaded via `apt`.
-
-#### Instructions
 
 1. From your jump box, start up your Ansible container and attach to it.
 
@@ -103,18 +75,7 @@ Task: Generate a high amount of web requests to your pen-testing servers and mak
 
 <summary> Activity File: wget-DoS </summary>
 
-
-#### Scenario
-
-- You are a cloud architect that has been tasked with setting up an ELK server to gather logs for the Incident Response team to use for training.
-
-- Before you hand over the server to the IR team, your senior architect has asked that you verify the ELK server is working as expected and pulling both logs and metrics from the pen-testing web servers.
-
-**Your Task**: Generate a high amount of web requests to your pen-testing servers and make sure that Kibana is picking them up.
-
 ---
-
-#### Instructions
 
 The Metrics section for a single VM will show Load and Network Traffic data. 
 
