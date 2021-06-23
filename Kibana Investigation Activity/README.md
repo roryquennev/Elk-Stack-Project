@@ -63,16 +63,16 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
   - Here are our results for Webserver1:
     ![stressnapshotwebserver1](https://user-images.githubusercontent.com/77551247/123018380-723ea880-d39c-11eb-8473-4f3897a8be7f.PNG)
     
-    As we can see by running `sudo stress --cpu 1` we significant stress on the overall CPU usage, reaching its maximum. We can also observe a noteable spike in the load for the webserver as well. 
+    As we can see by running `sudo stress --cpu 1` there is significant stress placed on the overall CPU usage, reaching its maximum. We can also observe a noteable spike in the load for the webserver as well. 
 
 
 6. Run the `stress` program on all three of your VMs and take screenshots of the data generated on the Metrics page of Kibana.
+  - Running the same test on our other web servers, we see the same results replicated:
+        - Here are the results for Webserver2:
+        ![Stress snapshot_Webserver2](https://user-images.githubusercontent.com/77551247/123015813-39500500-d397-11eb-8655-e2ed461b3656.PNG)
 
-  - Here are the results for Webserver2:
-    ![Stress snapshot_Webserver2](https://user-images.githubusercontent.com/77551247/123015813-39500500-d397-11eb-8655-e2ed461b3656.PNG)
-
-  - Here are the results for Webserver3:
-    ![Stress snaptshot _Webserver3](https://user-images.githubusercontent.com/77551247/123015848-4b31a800-d397-11eb-9f62-cb4ac63affa8.PNG)
+        - Here are the results for Webserver3:
+        ![Stress snaptshot _Webserver3](https://user-images.githubusercontent.com/77551247/123015848-4b31a800-d397-11eb-9f62-cb4ac63affa8.PNG)
 
         
 </details>
