@@ -67,7 +67,7 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
 
 
 6. Run the `stress` program on all three of your VMs and take screenshots of the data generated on the Metrics page of Kibana.
-  - Running the same test on our other web servers, we see the same results replicated regarding the CPU usage and the Load. There remain no discernible increases pertaining to the Memory Usage or Network Traffic
+  - Running the same test on our other web servers, we see the same results replicated regarding the CPU usage and the Load. There remain no discernible increases pertaining to the Memory Usage or Network Traffic.
   
   - Here are our results for Webserver2:
     ![stresssnapshotwebserver2](https://user-images.githubusercontent.com/77551247/123019595-cb0f4080-d39e-11eb-86c0-13019ddda7f2.PNG)
@@ -113,7 +113,7 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 
 5. Open the Metrics page for the web machine you attacked and answer which of the VM metrics were affected the most from this traffic:
         
- - By running the wget loop at this web server, we see a mild increase in the CPU Usage and the Load but a signficantly larger increase in the Network Traffic
+ - By running the wget loop at this web server, we see a mild increase in the CPU Usage and the Load but a signficantly larger increase in the Network Traffic.
         
    ![wgetsnapshotwebserver1](https://user-images.githubusercontent.com/77551247/123021029-538ee080-d3a1-11eb-9312-a49eeaa504a2.PNG)
 
