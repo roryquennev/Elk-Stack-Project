@@ -102,7 +102,7 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
    ![wgetserver1](https://user-images.githubusercontent.com/77551247/123020038-a798c580-d39f-11eb-8c06-a99126790849.PNG)
 
 
-3. Run `ls` to view the file you downloaded from your web VM to your jump box. ![wgetsnapshot](https://user-images.githubusercontent.com/77551247/123020205-e9c20700-d39f-11eb-86f8-02b8ca067150.PNG)
+3. Run `ls` to view the file you downloaded from your web VM to your jump box. 
 
    ![jumpboxls](https://user-images.githubusercontent.com/77551247/123020147-d0b95600-d39f-11eb-9a73-187508c138a9.PNG)
 
@@ -111,10 +111,11 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 
         - You can use a bash `for` or `while` loop, directly on the command line, just as you did with the SSH command.
 
-5. Open the Metrics page for the web machine you attacked and answer the following questions:
+5. Open the Metrics page for the web machine you attacked and answer which of the VM metrics were affected the most from this traffic:
         
         - Which of the VM metrics were affected the most from this traffic?
-          ![Uploading wgetsnapshot.PNG…]()
+          ![wgetsnapshotwebserver1](https://user-images.githubusercontent.com/77551247/123021029-538ee080-d3a1-11eb-9312-a49eeaa504a2.PNG)
+
 
         
 **Bonus**: Notice that your `wget` loop creates a lot of duplicate files on your jump box.
