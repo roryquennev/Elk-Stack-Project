@@ -61,8 +61,8 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
 
 5. View the Metrics page for that VM in Kibana.  What indicates that CPU usage increased?
         
-        - Here are the results for Webserver1:
-        ![Stress snapshot](https://user-images.githubusercontent.com/77551247/123015652-d8283180-d396-11eb-9d65-b353fe469538.PNG)
+  - Here are the results for Webserver1:
+    ![Stress snapshot](https://user-images.githubusercontent.com/77551247/123015652-d8283180-d396-11eb-9d65-b353fe469538.PNG)
 
 
 6. Run the `stress` program on all three of your VMs and take screenshots of the data generated on the Metrics page of Kibana.
