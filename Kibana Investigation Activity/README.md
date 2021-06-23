@@ -69,11 +69,11 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
 6. Run the `stress` program on all three of your VMs and take screenshots of the data generated on the Metrics page of Kibana.
   - Running the same test on our other web servers, we see the same results replicated regarding the CPU usage and the Load. There remain no discernible increases pertaining to the Memory Usage or Network Traffic
   
-  - Here are the results for Webserver2:
+  - Here are our results for Webserver2:
     ![stresssnapshotwebserver2](https://user-images.githubusercontent.com/77551247/123019595-cb0f4080-d39e-11eb-86c0-13019ddda7f2.PNG)
 
-  - Here are the results for Webserver3:
-    ![Stress snaptshot _Webserver3](https://user-images.githubusercontent.com/77551247/123015848-4b31a800-d397-11eb-9f62-cb4ac63affa8.PNG)
+  - Here are our results for Webserver3:
+    ![stresssnapshotwebserver3](https://user-images.githubusercontent.com/77551247/123019785-28a38d00-d39f-11eb-8fa3-940c188e1827.PNG)
 
         
 </details>
