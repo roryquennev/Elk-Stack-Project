@@ -24,6 +24,8 @@ We can easily do this by trying to SSH to a web machine from our jump box direct
 2.  Run the failed SSH command in a loop to generate failed login log entries.
         
         - while :; do ssh -T ansible@10.0.0.5; done
+        ![sshjustoneserver](https://user-images.githubusercontent.com/77551247/123014520-723aaa80-d394-11eb-98f1-d7dfed82eedf.PNG)
+
 
 3. Search through the logs in Kibana to locate your generated failed login attempts.
 
@@ -35,6 +37,7 @@ We can easily do this by trying to SSH to a web machine from our jump box direct
         - while :; do ssh -T ansible@10.0.0.5 | ssh -T ansible@10.0.0.6 | ssh -T ansible@10.0.0.10; done
          
 ![SSHfailloginloop](https://user-images.githubusercontent.com/77551247/123013886-0dcb1b80-d393-11eb-84e2-e2fe3df17065.png)
+
 
           
 
