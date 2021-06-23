@@ -109,7 +109,7 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 
 4. Run the `wget` command in a loop to generate many web requests.
 
-        - You can use a bash `for` or `while` loop, directly on the command line, just as you did with the SSH command.
+        while :; do wget 10.0.0.5; done
 
 5. Open the Metrics page for the web machine you attacked and answer which of the VM metrics were affected the most from this traffic:
         
