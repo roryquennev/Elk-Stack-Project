@@ -135,5 +135,5 @@ Find a way to run the `wget` command without generating these extra files.
 
 ---
 
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
+
 
