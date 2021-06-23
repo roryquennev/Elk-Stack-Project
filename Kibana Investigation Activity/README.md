@@ -113,8 +113,8 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 
 5. Open the Metrics page for the web machine you attacked and answer which of the VM metrics were affected the most from this traffic:
         
-        - Which of the VM metrics were affected the most from this traffic?
-          ![wgetsnapshotwebserver1](https://user-images.githubusercontent.com/77551247/123021029-538ee080-d3a1-11eb-9312-a49eeaa504a2.PNG)
+ - Which of the VM metrics were affected the most from this traffic?
+   ![wgetsnapshotwebserver1](https://user-images.githubusercontent.com/77551247/123021029-538ee080-d3a1-11eb-9312-a49eeaa504a2.PNG)
 
 
         
