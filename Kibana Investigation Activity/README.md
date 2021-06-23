@@ -119,15 +119,15 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 
 
         
-**Bonus**: Notice that your `wget` loop creates a lot of duplicate files on your jump box.
+**Bonus**: Notice that your `wget` loop creates a lot of duplicate files on your jump box. They can be removed with the following command:
 
         rm index.*
 
-Find a way to run the `wget` command without generating these extra files.
+Find a way to run the `wget` command without generating these extra files:
                 
         while :; do wget 10.0.0.5 --delete-after; done
 
-**Bonus**: Write a nested loop that sends your `wget` command to all three of your web VMs over and over.
+**Bonus**: Write a nested loop that sends your `wget` command to all three of your web VMs over and over:
        
         while :; do wget 10.0.0.5 10.0.0.6 10.0.0.10 --delete-after; done
 </details>
