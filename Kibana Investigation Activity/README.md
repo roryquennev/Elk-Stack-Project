@@ -58,6 +58,7 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
 3. Run `sudo apt install stress` to install the stress program.
 
 4. Run `sudo stress --cpu 1` and allow `stress` to run for a few minutes. 
+![web1stress](https://user-images.githubusercontent.com/77551247/123016094-de6add80-d397-11eb-971b-115104d81860.PNG)
 
 5. View the Metrics page for that VM in Kibana.  What indicates that CPU usage increased?
         
