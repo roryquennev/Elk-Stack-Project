@@ -60,6 +60,8 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
 4. Run `sudo stress --cpu 1` and allow `stress` to run for a few minutes. 
 
 5. View the Metrics page for that VM in Kibana.  What indicates that CPU usage increased?
+        
+        
         - Here are the results for Webserver1:
           ![Stress snapshot](https://user-images.githubusercontent.com/77551247/123015652-d8283180-d396-11eb-9d65-b353fe469538.PNG)
 
