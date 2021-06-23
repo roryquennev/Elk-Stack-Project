@@ -124,12 +124,10 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 
 -  Find a way to run the `wget` command without generating these extra files.
                 
-        - Look up the flag options for `wget` and find the flag that lets you choose a location to save the file it downloads. 
-                
-        - Save that file to the Linux directory known as the "void" or the directory that doesn't save anything.
+        while :; do wget 10.0.0.5 --delete-after; done
 
 **Bonus**: Write a nested loop that sends your `wget` command to all three of your web VMs over and over.
-
+        while :; do wget 10.0.0.5 10.0.0.6 10.0.0.10 --delete-after; done
 </details>
 
 
