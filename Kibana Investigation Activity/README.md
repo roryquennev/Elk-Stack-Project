@@ -17,7 +17,7 @@ We can easily do this by trying to SSH to a web machine from our jump box direct
 
         - while :; do ssh -T ansible@10.0.0.5; done
     
-  ![sshjustoneserver](https://user-images.githubusercontent.com/77551247/123014694-c80f5280-d394-11eb-866c-6ba1a6179fde.PNG)
+          ![sshjustoneserver](https://user-images.githubusercontent.com/77551247/123014694-c80f5280-d394-11eb-866c-6ba1a6179fde.PNG)
 
 
 3. Search through the logs in Kibana to locate your generated failed login attempts.
