@@ -120,7 +120,7 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
         
 **Bonus**: Notice that your `wget` loop creates a lot of duplicate files on your jump box.
 
-  rm index.*
+        rm index.*
 
 -  Find a way to run the `wget` command without generating these extra files.
                 
