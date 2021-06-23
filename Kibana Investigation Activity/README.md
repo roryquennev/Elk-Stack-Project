@@ -99,30 +99,13 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 1. Log into your jump box.
 
 2. Run `wget ip.of.web.vm`.
+   ![wgetserver1](https://user-images.githubusercontent.com/77551247/123020038-a798c580-d39f-11eb-8c06-a99126790849.PNG)
 
-        ```bash
-        sysadmin@Jump-Box-Provisioner:~$ wget 10.0.0.5
-        --2020-05-08 15:44:00--  http://10.0.0.5/
-        Connecting to 10.0.0.5:80... connected.
-        HTTP request sent, awaiting response... 302 Found
-        Location: login.php [following]
-        --2020-05-08 15:44:00--  http://10.0.0.5/login.php
-        Reusing existing connection to 10.0.0.5:80.
-        HTTP request sent, awaiting response... 200 OK
-        Length: 1523 (1.5K) [text/html]
-        Saving to: index.html
 
-        index.html            100%[=======================>]   1.49K  --.-KB/s    in 0s      
+3. Run `ls` to view the file you downloaded from your web VM to your jump box. ![wgetsnapshot](https://user-images.githubusercontent.com/77551247/123020205-e9c20700-d39f-11eb-86f8-02b8ca067150.PNG)
 
-        2020-05-08 15:44:00 (179 MB/s) - index.html saved [1523/1523]
-        ```
+   ![jumpboxls](https://user-images.githubusercontent.com/77551247/123020147-d0b95600-d39f-11eb-9a73-187508c138a9.PNG)
 
-3. Run `ls` to view the file you downloaded from your web VM to your jump box. 
-
-        ```bash
-        sysadmin@Jump-Box-Provisioner:~$ ls
-        index.html
-        ```
 
 4. Run the `wget` command in a loop to generate many web requests.
 
@@ -131,7 +114,9 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 5. Open the Metrics page for the web machine you attacked and answer the following questions:
         
         - Which of the VM metrics were affected the most from this traffic?
+          ![Uploading wgetsnapshot.PNG…]()
 
+        
 **Bonus**: Notice that your `wget` loop creates a lot of duplicate files on your jump box.
 
 -  Write a command to delete _all_ of these files at once.
