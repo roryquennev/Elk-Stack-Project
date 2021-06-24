@@ -144,7 +144,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
     ![hosts](Images/hosts.PNG)
 
-    *This will aid in specifying which machine to install the ELK server on versus the machines that will require Filebeat, Metricbeat and the DVWA. Meanwhile, adding 'ansible_python_interpreter=/user/bin/python3' will allow Ansible to detect the use of Python 3!
+    **Note:** This will aid in specifying which machine to install the ELK server on versus the machines that will require Filebeat, Metricbeat and the DVWA. Meanwhile, adding 'ansible_python_interpreter=/user/bin/python3' will allow Ansible to detect the use of Python 3!
   
 - Run the playbooks in the order listed previously below our network diagram and update the corresponding configuration file using `nano` (where relevant) 
   - The playbooks can be run with the following command:
