@@ -62,7 +62,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
         - Description: Write a short description similar to: "Allow SSH from the jump box IP."
  
+ ---
   </details>
+  
 
 * [pentest.yml](./Ansible/pentest.yml) - To install the DVWA
 * [ELK-Playbook.yml](./Ansible/ELK-Playbook.yml) - To install ELK
