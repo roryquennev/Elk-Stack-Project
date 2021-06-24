@@ -133,6 +133,8 @@ We have installed the following Beats on these machines:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the Ansible control node and follow the steps below:
+- Run `sudo docker start <container_name>` followed by `sudo docker attach <container_name>` 
+  - *if you have forgotten the container run `sudo docker container list -a`
 - Copy the playbook (.yml) file to /etc/ansible 
 - Update the hosts file (same directory) to include the virtual machines by their internal IP and their respective server grouping
   - Use the command:
