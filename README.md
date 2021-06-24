@@ -21,9 +21,9 @@ This document contains the following details:
   - Machines Being Monitored
 - How to Use the Ansible Build
 
-*Please note: Both Docker and Ansible will need to be previously installed through the use of the Jump-Box-Provisioner* 
+*Please note: Both Docker and Ansible will need to be previously installed on the Jump-Box-Provisioner* 
  <details>
- <summary> Click here, if Docker and Ansible has not been installed on the Jump-Box-Provisioner </summary>
+ <summary> Click here, if Docker and Ansible has not been installed </summary>
  
  ---
  
