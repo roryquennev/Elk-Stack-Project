@@ -6,6 +6,20 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat. 
 
+* [pentest.yml](./Ansible/pentest.yml) - To install the DVWA
+* [ELK-Playbook.yml](./Ansible/ELK-Playbook.yml) - To install ELK
+* [Filebeat-Config.yml](./Ansible/Filebeat-Config.yml) - To configure Filebeat
+* [Filebeat-playbook.yml](./Ansible/Filebeat-Playbook.yml) - To install Filebeat
+* [Metricbeat-Config.yml](./Ansible/Metricbeat-Config.yml) - To configure Metricbeat
+* [Metricbeat-playbook.yml](./Ansible/Metricbeat-Playbook.yml) - To install Metricbeat
+
+This document contains the following details:
+- Description of the Topology
+- Access Policies
+- ELK Configuration
+  - Beats in Use
+  - Machines Being Monitored
+- How to Use the Ansible Build
 
 *Please note: Both Docker and Ansible will need to be previously installed through the use of the Jump-Box-Provisioner* 
  <details>
@@ -42,23 +56,6 @@ These files have been tested and used to generate a live ELK deployment on Azure
  
   </details>
   
-
-* [pentest.yml](./Ansible/pentest.yml) - To install the DVWA
-* [ELK-Playbook.yml](./Ansible/ELK-Playbook.yml) - To install ELK
-* [Filebeat-Config.yml](./Ansible/Filebeat-Config.yml) - To configure Filebeat
-* [Filebeat-playbook.yml](./Ansible/Filebeat-Playbook.yml) - To install Filebeat
-* [Metricbeat-Config.yml](./Ansible/Metricbeat-Config.yml) - To configure Metricbeat
-* [Metricbeat-playbook.yml](./Ansible/Metricbeat-Playbook.yml) - To install Metricbeat
-
-This document contains the following details:
-- Description of the Topology
-- Access Policies
-- ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
-- How to Use the Ansible Build
-
-
 ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
