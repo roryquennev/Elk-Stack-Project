@@ -13,11 +13,11 @@ These files have been tested and used to generate a live ELK deployment on Azure
  
  ---
  
-  1. Start by installing `docker.io` on your Jump box.
-
+  1. Install `docker.io`:
+ 
     - Run `sudo apt update` then `sudo apt install docker.io`
 
-2. Verify that the Docker service is running.
+2. Verify that the Docker service is running:
 
     - Run `sudo systemctl status docker`
 
