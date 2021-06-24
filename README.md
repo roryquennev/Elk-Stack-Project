@@ -35,34 +35,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
     - Run `docker run -ti cyberxsecurity/ansible:latest bash` to start the container.
 
     - Run `exit` to quit.
-
-5. Create a new security group rule that allows your jump box machine full access to your VNet.
-
-    - Get the private IP address of your jump box.
-
-    - Go to your security group settings and create an inbound rule. Create rules allowing SSH connections from your IP address.
-
-       - Source: Use the **IP Addresses** setting with your jump box's internal IP address in the field.
-
-        - Source port ranges: **Any** or * can be listed here.
-
-        - Destination: Set to **VirtualNetwork**.
-
-        - Service: Set to **SSH**
-
-        - Destination port ranges: WIll default to port `22`.
-
-        - Protocol: Will default to  **TCP**.
-
-        - Action: Set to **Allow** traffic from your jump box.
-
-        - Priority: Priority must be a lower number than your rule to deny all traffic.
-
-        - Name: Name this rule anything you like, but it should describe the rule. For example: `SSH from Jump Box`.
-
-        - Description: Write a short description similar to: "Allow SSH from the jump box IP."
  
  ---
+ 
   </details>
   
 
