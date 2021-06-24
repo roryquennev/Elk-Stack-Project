@@ -7,9 +7,10 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat. 
 
 <details>
-<summary> *Please note: Both Docker and Ansible will need to be previously installed through the use of the Jump-Box-Provisioner. If it has not been installed click here <summary>
+<summary> *Please note: Both Docker and Ansible will need to be previously installed through the use of the Jump-Box-Provisioner. If it has not been installed click here </summary>
  
  ---
+ 
   1. Start by installing `docker.io` on your Jump box.
 
     - Run `sudo apt update` then `sudo apt install docker.io`
@@ -60,6 +61,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
         - Name: Name this rule anything you like, but it should describe the rule. For example: `SSH from Jump Box`.
 
         - Description: Write a short description similar to: "Allow SSH from the jump box IP."
+ 
   </details>
 
 * [pentest.yml](./Ansible/pentest.yml) - To install the DVWA
