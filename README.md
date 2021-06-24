@@ -134,7 +134,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 - SSH into the Jump-Box-Provisioner and access the Ansible control node
   - Run `sudo docker start <container_name>` followed by `sudo docker attach <container_name>` 
-  - *if you have forgotten the container's name run `sudo docker container list -a` 
+    **Note:** if you have forgotten the container's name run `sudo docker container list -a` 
 - Copy the playbook (.yml) file to /etc/ansible 
 - Update the hosts file (same directory) to include the virtual machines by their internal IP and their respective server grouping
   - Use the command:
