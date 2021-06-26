@@ -150,7 +150,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
   - The playbooks can be run with the following command:
   `ansible-playbook /etc/ansible/<filename.yml>`
 - Following successful installation of playbooks, navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that Kibana is accessible  
-- Navigate to the Kibana Home page, as we still need to import our data from our webservers
+- Navigate to the Kibana Home page, as we still need to import our data from our webservers:
   - Import the log data:
     - Click 'Add log data' and 'System logs'
     - Click 'Check data' and then 'System logs dashboard'
