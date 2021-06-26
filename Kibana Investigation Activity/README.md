@@ -126,6 +126,8 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 Find a way to run the `wget` command without generating these extra files:
                 
         while :; do wget 10.0.0.5 --delete-after; done
+        OR
+        while :; do wget 10.0.0.5 -O/dev/null; done
 
 **Bonus**: Write a nested loop that sends your `wget` command to all three of your web VMs over and over:
        
