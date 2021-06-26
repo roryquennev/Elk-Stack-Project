@@ -28,7 +28,7 @@ This document contains the following details:
  ---
 SSH into the Jump-Box-Provisioner and do the following:
   
-1. To install `docker.io`:
+1. Install `docker.io`:
  
     - Run `sudo apt update` then `sudo apt install docker.io`
 
