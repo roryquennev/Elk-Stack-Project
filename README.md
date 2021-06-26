@@ -26,8 +26,9 @@ This document contains the following details:
  <summary> Click here, if Docker and Ansible has not been installed </summary>
  
  ---
- 
-  1. To install `docker.io`:
+SSH into the Jump-Box-Provisioner and do the following:
+  
+1. To install `docker.io`:
  
     - Run `sudo apt update` then `sudo apt install docker.io`
 
